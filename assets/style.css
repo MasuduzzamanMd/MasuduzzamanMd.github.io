@@ -93,7 +93,7 @@ ul.bul li{margin-bottom:9px}
 /* ---------- gallery ---------- */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
 .grid figure{margin:0}
-.grid img{border:1px solid var(--line);border-radius:3px;aspect-ratio:4/3;object-fit:cover}
+.grid img{border:1px solid var(--line);border-radius:3px;aspect-ratio:4/3;object-fit:contain;background:#fff;padding:6px}
 .grid figcaption{font-size:.85rem;color:var(--muted);margin-top:7px}
 
 /* ---------- contact ---------- */
@@ -110,3 +110,54 @@ footer .wrap{max-width:var(--maxw);margin:0 auto;padding:24px 22px 40px;
   font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);
   display:flex;gap:18px;flex-wrap:wrap}
 footer a{color:var(--muted)}
+
+/* ---------- animated hero (MTP) ---------- */
+.hero-atoms{position:relative;height:min(88vh,760px);min-height:460px;
+  background:#0a0f16;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-atoms canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-atoms .veil{position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(10,15,22,.35) 0%,rgba(10,15,22,.82) 70%)}
+.hero-atoms .center{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:0 24px}
+.hero-atoms .mark{font-family:"IBM Plex Mono",monospace;font-size:clamp(3.4rem,11vw,7rem);
+  font-weight:500;letter-spacing:.16em;color:#fff;margin:0;line-height:1;
+  text-indent:.16em;opacity:0;animation:rise 1s ease .15s forwards}
+.hero-atoms .full{font-family:"IBM Plex Serif",serif;font-weight:400;
+  font-size:clamp(1.1rem,3.2vw,1.9rem);color:#e6ecf3;margin:18px 0 0;letter-spacing:.01em;
+  opacity:0;animation:rise 1s ease .45s forwards}
+.hero-atoms .tagline{font-family:"IBM Plex Mono",monospace;font-size:12.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:#7fd4c8;margin:26px 0 0;
+  opacity:0;animation:rise 1s ease .75s forwards}
+.hero-atoms .scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:#8899a8;text-decoration:none}
+.hero-atoms .scroll:hover{color:#fff;text-decoration:none}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .hero-atoms .mark,.hero-atoms .full,.hero-atoms .tagline{animation:none;opacity:1}
+}
+.intro{max-width:760px;margin:0 auto;text-align:center;padding:58px 0 0}
+.intro p{font-size:1.12rem;color:var(--muted)}
+
+/* ---------- publication rows with thumbnails ---------- */
+ul.pubs li{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:start}
+ul.pubs img{border:1px solid var(--line);border-radius:3px;background:#fff;
+  width:100%;aspect-ratio:4/3;object-fit:contain;padding:6px}
+@media(max-width:600px){ul.pubs li{grid-template-columns:1fr}ul.pubs img{max-width:280px}}
+.wide{border:1px solid var(--line);border-radius:4px;margin:6px 0 0;background:#fff;padding:8px}
+
+/* ---------- journal cover cards ---------- */
+.card img.coverimg{aspect-ratio:3/4;object-fit:contain;background:#0a0f16;padding:0}
+
+/* ---------- lead researcher block ---------- */
+.lead{display:grid;grid-template-columns:180px 1fr;gap:26px;align-items:start;margin-top:8px}
+.lead img{border:1px solid var(--line);border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover}
+@media(max-width:600px){.lead{grid-template-columns:1fr}.lead img{max-width:200px}}
+
+/* ---------- video embeds ---------- */
+.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.videos figure{margin:0}
+.videos .frame{position:relative;padding-top:56.25%;border:1px solid var(--line);
+  border-radius:3px;overflow:hidden;background:#0a0f16}
+.videos iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.videos figcaption{font-size:.85rem;color:var(--muted);margin-top:7px}
