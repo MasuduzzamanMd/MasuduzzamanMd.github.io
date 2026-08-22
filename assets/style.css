@@ -26,8 +26,12 @@ header.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);
   display:flex;align-items:center;gap:30px;min-height:62px;position:relative}
-nav .brand{color:var(--navy);font-family:"IBM Plex Serif",serif;
-  font-weight:700;font-size:20px;letter-spacing:.05em}
+nav .brand{display:flex;align-items:center;gap:11px;color:var(--navy);text-decoration:none}
+nav .brand:hover{text-decoration:none}
+nav .logo{width:34px;height:34px;display:block;flex:0 0 auto}
+nav .wordmark{font-family:"IBM Plex Serif",serif;font-weight:700;font-size:20px;
+  letter-spacing:.05em;line-height:1}
+@media (prefers-reduced-motion:reduce){nav .logo animate{display:none}}
 nav .brand:hover{text-decoration:none}
 nav .brand span{display:none}
 nav .links{display:flex;gap:30px;flex-wrap:wrap;margin:0 auto}
