@@ -155,3 +155,31 @@ footer .fwrap{max-width:var(--maxw);margin:0 auto;padding:28px var(--pad) 40px;
 footer .fwrap span:first-child{margin-right:auto}
 footer a{color:var(--muted)}
 footer a:hover{color:var(--navy)}
+
+/* ================= journal logo strip ================= */
+.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:26px 34px;align-items:center;justify-items:center;margin:6px 0 34px}
+.logos a{display:flex;align-items:center;justify-content:center;height:66px;width:100%;
+  filter:grayscale(1);opacity:.72;transition:filter .2s ease,opacity .2s ease}
+.logos a:hover{filter:none;opacity:1;text-decoration:none}
+.logos img{max-height:56px;width:auto;object-fit:contain}
+.center-block{text-align:center}
+.center-block h1,.center-block h2{text-align:center}
+.center-block h2::after{margin-left:auto;margin-right:auto}
+.scholar{display:inline-flex;align-items:center;gap:9px;font-size:1.02rem;
+  border:1px solid var(--line);border-radius:999px;padding:9px 20px;color:var(--navy)}
+.scholar:hover{text-decoration:none;border-color:var(--teal);background:var(--soft)}
+
+/* ================= profile (people style) ================= */
+.profile{display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:start;
+  padding:44px 0 8px}
+.profile>img{border:1px solid var(--line);border-radius:4px;width:100%;
+  aspect-ratio:1/1;object-fit:cover}
+.profile h1{font-size:1.9rem;margin:0 0 18px}
+.profile .grp{margin:0 0 22px}
+.profile .grp .label{font-weight:600;color:var(--navy);font-size:.95rem;
+  margin:0 0 6px;font-family:"IBM Plex Sans",sans-serif}
+.profile .grp p{margin:0 0 4px;font-size:.96rem;color:var(--muted)}
+.profile .grp p b{color:var(--ink);font-weight:600}
+@media(max-width:660px){.profile{grid-template-columns:1fr;gap:22px}
+  .profile>img{max-width:200px}}
