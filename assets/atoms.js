@@ -6,10 +6,10 @@
   var W, H, dpr, parts = [];
 
   var SPECIES = [
-    { r: 2.6, c: '#5f9dff', n: 0.42 },  // water oxygen
+    { r: 2.6, c: '#7fb2f0', n: 0.42 },  // water oxygen
     { r: 1.7, c: '#9fb6cc', n: 0.34 },  // hydrogen
-    { r: 3.4, c: '#5fd8c4', n: 0.14 },  // cation
-    { r: 3.4, c: '#e8a44c', n: 0.10 }   // anion
+    { r: 3.4, c: '#e8a020', n: 0.14 },  // cation
+    { r: 3.4, c: '#d9e4f2', n: 0.10 }   // anion
   ];
 
   function pick() {
