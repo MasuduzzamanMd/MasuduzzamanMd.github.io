@@ -25,12 +25,12 @@ img{max-width:100%;height:auto;display:block}
 header.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);
-  display:flex;align-items:center;gap:30px;min-height:60px}
-nav .brand{margin-right:auto;color:var(--navy);font-family:"IBM Plex Serif",serif;
-  font-weight:600;font-size:20px;letter-spacing:.04em}
+  display:flex;align-items:center;gap:30px;min-height:62px;position:relative}
+nav .brand{color:var(--navy);font-family:"IBM Plex Serif",serif;
+  font-weight:700;font-size:20px;letter-spacing:.05em}
 nav .brand:hover{text-decoration:none}
 nav .brand span{display:none}
-nav .links{display:flex;gap:26px;flex-wrap:wrap}
+nav .links{display:flex;gap:30px;flex-wrap:wrap;margin:0 auto}
 nav .links a{font-size:14.5px;color:var(--ink);padding:5px 0;
   border-bottom:2px solid transparent;letter-spacing:.005em}
 nav .links a:hover{color:var(--navy);text-decoration:none;border-bottom-color:var(--line)}
