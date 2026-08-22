@@ -157,12 +157,15 @@ footer a{color:var(--muted)}
 footer a:hover{color:var(--navy)}
 
 /* ================= journal logo strip ================= */
-.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:26px 34px;align-items:center;justify-items:center;margin:6px 0 34px}
-.logos a{display:flex;align-items:center;justify-content:center;height:66px;width:100%;
-  filter:grayscale(1);opacity:.72;transition:filter .2s ease,opacity .2s ease}
-.logos a:hover{filter:none;opacity:1;text-decoration:none}
-.logos img{max-height:56px;width:auto;object-fit:contain}
+.logos{display:grid;grid-template-columns:repeat(5,1fr);gap:22px 30px;
+  align-items:center;justify-items:center;margin:10px auto 30px;max-width:900px}
+.logos a{display:flex;align-items:center;justify-content:center;height:62px;width:100%;
+  transition:transform .18s ease}
+.logos a:hover{transform:scale(1.06);text-decoration:none}
+.logos img{max-height:50px;max-width:100%;width:auto;object-fit:contain}
+@media(max-width:860px){.logos{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.logos{grid-template-columns:repeat(2,1fr)}
+  .logos a{height:52px}.logos img{max-height:42px}}
 .center-block{text-align:center}
 .center-block h1,.center-block h2{text-align:center}
 .center-block h2::after{margin-left:auto;margin-right:auto}
