@@ -129,6 +129,7 @@ ul.pubs .nofig{display:block;width:100%;aspect-ratio:4/3;border:1px dashed var(-
 .grid figure{margin:0}
 .grid img{border:1px solid var(--line);border-radius:3px;aspect-ratio:4/3;
   object-fit:cover;background:#fff;width:100%;display:block}
+.grid img.coverfig{aspect-ratio:3/4;object-fit:contain;background:#f2f5f8;padding:8px}
 .grid figcaption{font-size:.88rem;margin-top:10px;line-height:1.45}
 .grid figcaption a{color:var(--ink);font-weight:500;display:block}
 .grid figcaption a:hover{color:var(--link)}
