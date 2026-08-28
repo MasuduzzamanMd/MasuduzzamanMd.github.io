@@ -12,6 +12,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+  /* Journal / publisher logo strip — two centred rows */
+  .jlogos{display:flex;flex-direction:column;align-items:center;gap:16px;
+          max-width:900px;margin:20px auto 24px}
+  .jlogos .jrow{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+                gap:22px 34px;width:100%}
+  .jlogos a{display:inline-flex;align-items:center;justify-content:center;line-height:0;padding:2px}
+  .jlogos img{height:46px !important;width:auto !important;max-width:160px;
+              object-fit:contain;display:block;
+              transition:transform .18s ease,opacity .18s ease}
+  .jlogos .pubrow img{height:38px !important;max-width:180px}
+  .jlogos a:hover img{transform:translateY(-2px);opacity:.85}
+  .jlogos .pubrow{padding-top:14px;border-top:1px solid #e6ecf3;max-width:720px;margin:0 auto}
+  @media (max-width:640px){
+    .jlogos{gap:12px}
+    .jlogos .jrow{gap:16px 22px}
+    .jlogos img{height:34px !important;max-width:120px}
+    .jlogos .pubrow img{height:28px !important;max-width:130px}
+  }
+</style>
 </head>
 <body>
 
@@ -60,17 +80,19 @@
 <main>
   <div class="center-block" style="padding:48px 0 10px">
     <h2 style="margin-top:0">Journal Publications</h2>
-    <div class="logos" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center">
-      <a href="https://onlinelibrary.wiley.com/journal/16136829" title="Small"><img src="images/jr-small.png" alt="Small"></a>
-      <a href="https://pubs.acs.org/journal/aamick" title="ACS Applied Materials &amp; Interfaces"><img src="images/jr-acsami.jpg" alt="ACS Applied Materials and Interfaces"></a>
-      <a href="https://pubs.aip.org/aip/pof" title="Physics of Fluids"><img src="images/jr-pof.png" alt="Physics of Fluids"></a>
-      <a href="https://pubs.acs.org/journal/langd5" title="Langmuir"><img src="images/jr-langmuir.png" alt="Langmuir"></a>
-      <a href="https://link.springer.com/journal/10404" title="Microfluidics and Nanofluidics"><img src="images/jr-microfluidics.png" alt="Microfluidics and Nanofluidics"></a>
-    </div>
-    <div class="logos" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center">
-      <a href="https://pubs.aip.org/aip/pof" title="AIP Publishing — Physics of Fluids"><img src="images/jr-aip.png" alt="AIP Publishing"></a>
-      <a href="https://pubs.acs.org/journal/langd5" title="ACS — Langmuir, ACS Omega"><img src="images/jr-acs.png" alt="American Chemical Society"></a>
-      <a href="https://link.springer.com/journal/10404" title="Springer Nature — Microfluidics and Nanofluidics, JMST"><img src="images/jr-springer.png" alt="Springer Nature"></a>
+    <div class="jlogos">
+      <div class="jrow">
+        <a href="https://onlinelibrary.wiley.com/journal/16136829" title="Small"><img src="images/jr-small.png" alt="Small"></a>
+        <a href="https://pubs.acs.org/journal/aamick" title="ACS Applied Materials &amp; Interfaces"><img src="images/jr-acsami.jpg" alt="ACS Applied Materials and Interfaces"></a>
+        <a href="https://pubs.aip.org/aip/pof" title="Physics of Fluids"><img src="images/jr-pof.png" alt="Physics of Fluids"></a>
+        <a href="https://pubs.acs.org/journal/langd5" title="Langmuir"><img src="images/jr-langmuir.png" alt="Langmuir"></a>
+        <a href="https://link.springer.com/journal/10404" title="Microfluidics and Nanofluidics"><img src="images/jr-microfluidics.png" alt="Microfluidics and Nanofluidics"></a>
+      </div>
+      <div class="jrow pubrow">
+        <a href="https://pubs.aip.org/aip/pof" title="AIP Publishing — Physics of Fluids"><img src="images/jr-aip.png" alt="AIP Publishing"></a>
+        <a href="https://pubs.acs.org/journal/langd5" title="ACS — Langmuir, ACS Omega"><img src="images/jr-acs.png" alt="American Chemical Society"></a>
+        <a href="https://link.springer.com/journal/10404" title="Springer Nature — Microfluidics and Nanofluidics, JMST"><img src="images/jr-springer.png" alt="Springer Nature"></a>
+      </div>
     </div>
     <a class="scholar" href="https://scholar.google.com/citations?user=24VWKvkAAAAJ&hl=en">🎓 Google Scholar Profile</a>
   </div>
